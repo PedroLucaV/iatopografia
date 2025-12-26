@@ -72,10 +72,12 @@ const galerias = [
                                 class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]" />
                         </div>
 
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent
-                   opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                   flex items-end">
-                            <p class="text-white text-lg font-semibold p-6">
+                        <div class="absolute inset-0
+         bg-gradient-to-t from-black/70 via-black/30 to-transparent
+         opacity-100 md:opacity-0 md:group-hover:opacity-100
+         transition-opacity duration-300
+         flex items-end">
+                            <p class="text-white text-base font-semibold p-5">
                                 {{ foto.legenda }}
                             </p>
                         </div>

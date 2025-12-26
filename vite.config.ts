@@ -12,7 +12,7 @@ export default defineConfig({
     tailwindcss(),
     vueDevTools(),
   ],
-  base:'/iatopografia/',
+  base:'/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
