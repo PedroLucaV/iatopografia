@@ -23,9 +23,9 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       <img src="/logo.png" alt="logo" class="h-[70%]" />
       <ul class="hidden md:flex text-white font-bold uppercase text-lg gap-8">
         <li v-for="link in links" :key="link">
-          <a :href="`#${link.link}`" class="relative transition hover:text-green-400
+          <a :href="`#${link.link}`" class="relative transition hover:text-stone-400
                    after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-                   after:w-0 after:bg-green-400 after:transition-all
+                   after:w-0 after:bg-stone-400 after:transition-all
                    hover:after:w-full">
             {{ link.nome }}
           </a>
@@ -40,7 +40,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
     <div v-show="menuOpen" class="md:hidden bg-[#57483d] border-t border-white/20">
       <ul class="flex flex-col items-center gap-6 py-6 text-white font-bold uppercase">
         <li v-for="link in links" :key="link">
-          <a @click="menuOpen = false" :href="`#${link}`" class="transition hover:text-green-400">
+          <a @click="menuOpen = false" :href="`#${link}`" class="transition hover:text-stone-400">
             {{ link }}
           </a>
         </li>
