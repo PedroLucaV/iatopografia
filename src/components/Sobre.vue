@@ -4,7 +4,8 @@ import haelison from '@/assets/haelison.png'
 
 <template>
     <section id="sobre" class="w-full bg-[#f7f7f7] py-24 px-6">
-        <div class="max-w-7xl mx-auto w-full px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-[5rem] md:gap-[12rem]">
+        <div
+            class="max-w-7xl mx-auto w-full px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-[5rem] md:gap-[12rem]">
             <div class="flex flex-col gap-6">
                 <span class="text-sm uppercase tracking-widest text-gray-500">
                     Sobre

@@ -2,7 +2,6 @@
     <section id="porque-escolher" class="w-full py-24 px-6">
         <div class="max-w-7xl mx-auto flex flex-col gap-12">
 
-            <!-- Título -->
             <div class="text-center">
                 <h2 class="text-4xl font-bold text-[#2f2f2f]">
                     Por que escolher nossos serviços?
@@ -12,14 +11,12 @@
                 </p>
             </div>
 
-            <!-- Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <!-- Card 1 -->
                 <div
                     class="flex flex-col items-center text-center p-6 bg-[#f7f7f7] rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="text-green-500 text-5xl mb-4">
-                        <!-- ícone: profissional -->
+
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Profissionais Qualificados</h3>
@@ -28,7 +25,6 @@
                     </p>
                 </div>
 
-                <!-- Card 2 -->
                 <div
                     class="flex flex-col items-center text-center p-6 bg-[#f7f7f7] rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="text-green-500 text-5xl mb-4">
@@ -40,7 +36,6 @@
                     </p>
                 </div>
 
-                <!-- Card 3 -->
                 <div
                     class="flex flex-col items-center text-center p-6 bg-[#f7f7f7] rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="text-green-500 text-5xl mb-4">
@@ -52,7 +47,6 @@
                     </p>
                 </div>
 
-                <!-- Card 4 -->
                 <div
                     class="flex flex-col items-center text-center p-6 bg-[#f7f7f7] rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="text-green-500 text-5xl mb-4">

@@ -5,7 +5,8 @@ const { getLink } = useWhatsapp()
 
 <template>
     <section id="inicio" class="w-full py-24 flex items-center">
-        <article class="max-w-7xl mx-auto w-full px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-[5rem] md:gap-[12rem]">
+        <article
+            class="max-w-7xl mx-auto w-full px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-[5rem] md:gap-[12rem]">
             <div class="flex justify-center">
                 <img src="/logo.png" alt="IA Topografia" class="w-52 sm:w-64 md:w-80 drop-shadow-2xl" />
             </div>
