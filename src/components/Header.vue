@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const links = ['inicio', 'sobre', 'projetos', 'contato']
 const menuOpen = ref(false)
@@ -7,15 +7,25 @@ const menuOpen = ref(false)
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
 }
+const showHeader = ref(true)
+let lastScroll = 0
+
+const onScroll = () => {
+  const y = window.scrollY
+
+  showHeader.value = y < lastScroll || y < 60
+  lastScroll = y
+}
+
+onMounted(() => window.addEventListener('scroll', onScroll))
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
+
 </script>
 
 <template>
-  <header class="w-full bg-[#57483d]">
+  <header class="sticky top-0 z-50 w-full bg-[#57483d] transition-all duration-200 ease-out" :class="showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'">
     <div class="flex items-center justify-between h-[100px] px-6 md:px-12">
-      <!-- Logo -->
       <img src="/logo.png" alt="logo" class="h-[70%]" />
-
-      <!-- Menu desktop -->
       <ul class="hidden md:flex text-white font-bold uppercase text-lg gap-8">
         <li v-for="link in links" :key="link">
           <a
@@ -28,8 +38,6 @@ const toggleMenu = () => {
           </a>
         </li>
       </ul>
-
-      <!-- Botão hamburguer (mobile) -->
       <button
         @click="toggleMenu"
         class="md:hidden text-white focus:outline-none"
@@ -41,8 +49,6 @@ const toggleMenu = () => {
         </svg>
       </button>
     </div>
-
-    <!-- Menu mobile -->
     <div
       v-show="menuOpen"
       class="md:hidden bg-[#57483d] border-t border-white/20"
