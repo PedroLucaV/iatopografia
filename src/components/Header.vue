@@ -40,8 +40,8 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
     <div v-show="menuOpen" class="md:hidden bg-[#57483d] border-t border-white/20">
       <ul class="flex flex-col items-center gap-6 py-6 text-white font-bold uppercase">
         <li v-for="link in links" :key="link">
-          <a @click="menuOpen = false" :href="`#${link}`" class="transition hover:text-stone-400">
-            {{ link }}
+          <a @click="menuOpen = false" :href="`#${link.link}`" class="transition hover:text-stone-400">
+            {{ link.nome }}
           </a>
         </li>
       </ul>
