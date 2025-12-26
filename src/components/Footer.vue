@@ -16,9 +16,6 @@ const { getLink } = useWhatsapp()
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
             <div class="flex flex-col items-center md:items-start gap-6 text-center md:text-left">
                 <img src="/logo.png" alt="Logo" class="w-40 md:w-48" />
-                <p class="text-gray-300 text-sm max-w-xs md:max-w-[200px]">
-                    Empresa especializada em topografia, oferecendo precisão e qualidade em todos os projetos.
-                </p>
                 <div class="flex gap-4 justify-center md:justify-start">
                     <a href="https://www.instagram.com/iatopografia/" class="transition-transform hover:scale-110">
                         <img :src="instaIcon" class="w-8 h-8 md:w-10 md:h-10" alt="Instagram">
@@ -43,8 +40,7 @@ const { getLink } = useWhatsapp()
             <div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
                 <h4 class="text-lg font-bold mb-2">Contato</h4>
                 <p class="text-gray-300 text-sm">Telefone: (82) 99127-5633</p>
-                <p class="text-gray-300 text-sm">Email: contato@topografia.com</p>
-                <p class="text-gray-300 text-sm">Endereço: Rua Exemplo, 123 - Cidade/Estado</p>
+                <p class="text-gray-300 text-sm">Email: contato@email.com</p>
             </div>
         </div>
 
