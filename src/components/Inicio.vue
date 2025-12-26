@@ -25,9 +25,9 @@ const { getLink } = useWhatsapp()
                         class="bg-green-500 hover:bg-green-600 text-[#eee3db] font-bold px-6 py-3 rounded [10px] transition shadow-lg shadow-green-500/30 text-center">
                         Solicitar Orçamento
                     </a>
-                    <a href="#projetos"
+                    <a href="#servicos"
                         class="border border-gray-500 hover:border-gray-400 bg-[#57483d] hover:bg-[#332921] text-[#eee3db] font-semibold px-6 py-3 rounded-[10px] transition shadow-lg shadow-[#332921]/30 text-center">
-                        Ver Projetos
+                        Ver Serviços
                     </a>
                 </div>
             </div>
