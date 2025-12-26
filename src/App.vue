@@ -1,7 +1,8 @@
 <script setup lang="ts">
-  import Galerias from './components/Galerias.vue';
+  import Principais from './components/Principais.vue';
   import Header from './components/Header.vue';
   import Inicio from './components/Inicio.vue';
+  import PorQue from './components/PorQue.vue';
   import Sobre from './components/Sobre.vue';
   import Whatsapp from './components/Whatsapp.vue';
 </script>
@@ -10,7 +11,8 @@
   <Header></Header>
   <Inicio></Inicio>
   <Sobre></Sobre>
-  <Galerias></Galerias>
+  <PorQue></PorQue>
+  <Principais></Principais>
   <Whatsapp></Whatsapp>
 </template>
 

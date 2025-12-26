@@ -4,7 +4,7 @@ const { getLink } = useWhatsapp()
 </script>
 
 <template>
-    <section id="inicio" class="w-full mt-24 md:mt-40 flex items-center">
+    <section id="inicio" class="w-full py-24 flex items-center">
         <article class="max-w-7xl mx-auto w-full px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-[5rem] md:gap-[12rem]">
             <div class="flex justify-center">
                 <img src="/logo.png" alt="IA Topografia" class="w-52 sm:w-64 md:w-80 drop-shadow-2xl" />

@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const links = ['inicio', 'sobre', 'projetos', 'contato']
+const links = ['inicio', 'sobre', 'projetos']
 const menuOpen = ref(false)
 
 const toggleMenu = () => {
