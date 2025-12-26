@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const links = ['inicio', 'sobre', 'projetos']
+const links = [{nome: 'Inicio', link: "inicio"}, {nome: 'Sobre', link: "sobre"}, {nome: 'por que escolher', link: "porque"}, {nome: 'Serviços', link: "servicos"}]
 const menuOpen = ref(false)
 
 const toggleMenu = () => {
@@ -30,12 +30,12 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       <ul class="hidden md:flex text-white font-bold uppercase text-lg gap-8">
         <li v-for="link in links" :key="link">
           <a
-            :href="`#${link}`"
+            :href="`#${link.link}`"
             class="relative transition hover:text-green-400
                    after:absolute after:left-0 after:-bottom-1 after:h-[2px]
                    after:w-0 after:bg-green-400 after:transition-all
                    hover:after:w-full">
-            {{ link }}
+            {{ link.nome }}
           </a>
         </li>
       </ul>

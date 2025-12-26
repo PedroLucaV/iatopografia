@@ -1,5 +1,5 @@
 <template>
-    <section id="porque-escolher" class="w-full py-24 px-6">
+    <section id="porque" class="w-full py-24 px-6">
         <div class="max-w-7xl mx-auto flex flex-col gap-12">
 
             <div class="text-center">
