@@ -11,6 +11,7 @@ const showHeader = ref(true)
 let lastScroll = 0
 
 const onScroll = () => {
+  if (menuOpen.value) return
   const y = window.scrollY
 
   showHeader.value = y < lastScroll || y < 60
