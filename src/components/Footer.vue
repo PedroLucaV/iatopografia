@@ -14,20 +14,22 @@ const { getLink } = useWhatsapp()
 <template>
     <footer class="w-full bg-gray-900 text-white py-16 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-
-            <div class="flex flex-col gap-6">
-                <img src="/logo.png" alt="Logo" class=" w-[200px]" />
-                <div class="flex gap-4">
-                    <a href="https://www.instagram.com/iatopografia/" class="text-gray-300 hover:text-green-400 transition-colors">
-                    <img :src="instaIcon" class="w-10 h-10" alt="">
+            <div class="flex flex-col items-center md:items-start gap-6 text-center md:text-left">
+                <img src="/logo.png" alt="Logo" class="w-40 md:w-48" />
+                <p class="text-gray-300 text-sm max-w-xs md:max-w-[200px]">
+                    Empresa especializada em topografia, oferecendo precisão e qualidade em todos os projetos.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="https://www.instagram.com/iatopografia/" class="transition-transform hover:scale-110">
+                        <img :src="instaIcon" class="w-8 h-8 md:w-10 md:h-10" alt="Instagram">
                     </a>
-                    <a :href="getLink()" class="text-gray-300 hover:text-green-400 transition-colors">
-                    <img :src="whatsappIcon" class="w-10 h-10" alt="">
+                    <a :href="getLink()" class="transition-transform hover:scale-110">
+                        <img :src="whatsappIcon" class="w-8 h-8 md:w-10 md:h-10" alt="Whatsapp">
                     </a>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
                 <h4 class="text-lg font-bold mb-2">Navegação</h4>
                 <ul class="flex flex-col gap-2">
                     <li v-for="link in links" :key="link.link">
@@ -38,16 +40,14 @@ const { getLink } = useWhatsapp()
                 </ul>
             </div>
 
-            <!-- Bloco 3: Contato -->
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
                 <h4 class="text-lg font-bold mb-2">Contato</h4>
                 <p class="text-gray-300 text-sm">Telefone: (82) 99127-5633</p>
                 <p class="text-gray-300 text-sm">Email: contato@topografia.com</p>
+                <p class="text-gray-300 text-sm">Endereço: Rua Exemplo, 123 - Cidade/Estado</p>
             </div>
-
         </div>
 
-        <!-- Linha de copyright -->
         <div class="mt-12 text-center text-gray-500 text-sm">
             &copy; 2025. Todos os direitos reservados por IA Topografia.
         </div>

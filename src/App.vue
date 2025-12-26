@@ -7,7 +7,6 @@
   import Whatsapp from './components/Whatsapp.vue';
 import Footer from './components/Footer.vue';
 </script>
-
 <template>
   <Header></Header>
   <Inicio></Inicio>
@@ -17,5 +16,4 @@ import Footer from './components/Footer.vue';
   <Whatsapp></Whatsapp>
   <Footer></Footer>
 </template>
-
 <style scoped></style>

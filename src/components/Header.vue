@@ -1,37 +1,29 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
-const links = [{nome: 'Inicio', link: "inicio"}, {nome: 'Sobre', link: "sobre"}, {nome: 'por que escolher', link: "porque"}, {nome: 'Serviços', link: "servicos"}]
+const links = [{ nome: 'Inicio', link: "inicio" }, { nome: 'Sobre', link: "sobre" }, { nome: 'por que escolher', link: "porque" }, { nome: 'Serviços', link: "servicos" }]
 const menuOpen = ref(false)
-
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
 }
 const showHeader = ref(true)
 let lastScroll = 0
-
 const onScroll = () => {
   if (menuOpen.value) return
   const y = window.scrollY
-
   showHeader.value = y < lastScroll || y < 60
   lastScroll = y
 }
-
 onMounted(() => window.addEventListener('scroll', onScroll))
 onUnmounted(() => window.removeEventListener('scroll', onScroll))
-
 </script>
-
 <template>
-  <header class="sticky top-0 z-50 w-full bg-[#57483d] transition-all duration-200 ease-out" :class="showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'">
+  <header class="sticky top-0 z-50 w-full bg-[#57483d] transition-all duration-200 ease-out"
+    :class="showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'">
     <div class="flex items-center justify-between h-[100px] px-6 md:px-12">
       <img src="/logo.png" alt="logo" class="h-[70%]" />
       <ul class="hidden md:flex text-white font-bold uppercase text-lg gap-8">
         <li v-for="link in links" :key="link">
-          <a
-            :href="`#${link.link}`"
-            class="relative transition hover:text-green-400
+          <a :href="`#${link.link}`" class="relative transition hover:text-green-400
                    after:absolute after:left-0 after:-bottom-1 after:h-[2px]
                    after:w-0 after:bg-green-400 after:transition-all
                    hover:after:w-full">
@@ -39,28 +31,16 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
           </a>
         </li>
       </ul>
-      <button
-        @click="toggleMenu"
-        class="md:hidden text-white focus:outline-none"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
+      <button @click="toggleMenu" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
-    <div
-      v-show="menuOpen"
-      class="md:hidden bg-[#57483d] border-t border-white/20"
-    >
+    <div v-show="menuOpen" class="md:hidden bg-[#57483d] border-t border-white/20">
       <ul class="flex flex-col items-center gap-6 py-6 text-white font-bold uppercase">
         <li v-for="link in links" :key="link">
-          <a
-            @click="menuOpen = false"
-            :href="`#${link}`"
-            class="transition hover:text-green-400"
-          >
+          <a @click="menuOpen = false" :href="`#${link}`" class="transition hover:text-green-400">
             {{ link }}
           </a>
         </li>
