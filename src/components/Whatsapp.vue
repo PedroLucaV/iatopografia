@@ -1,12 +1,12 @@
 <script setup>
 import whatsappIcon from '@/assets/wa-whatsapp-icon.svg'
-const phone = '5582999999999'
-const message = 'Olá! Gostaria de solicitar um orçamento.'
+import { useWhatsapp } from '@/composable/useWhatsapp'
+const { getLink } = useWhatsapp()
 </script>
 
 <template>
   <a
-    :href="`https://wa.me/${phone}?text=${encodeURIComponent(message)}`"
+    :href="getLink()"
     target="_blank"
     class="fixed bottom-6 right-6 transition hover:scale-105"
   >
