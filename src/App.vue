@@ -5,6 +5,7 @@
   import PorQue from './components/PorQue.vue';
   import Sobre from './components/Sobre.vue';
   import Whatsapp from './components/Whatsapp.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -14,6 +15,7 @@
   <PorQue></PorQue>
   <Principais></Principais>
   <Whatsapp></Whatsapp>
+  <Footer></Footer>
 </template>
 
 <style scoped></style>
